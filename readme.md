@@ -1,0 +1,1 @@
+This project aims to configure the jenkins project.
