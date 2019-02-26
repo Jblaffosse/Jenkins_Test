@@ -1,4 +1,4 @@
-hello: helloworld.cpp
+hello: 
 	g++ -Wall -o hello helloworld.cpp functions.cpp functions.h
 	
 help:
