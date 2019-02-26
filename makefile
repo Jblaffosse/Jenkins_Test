@@ -7,6 +7,10 @@ hello.o: hello.c
 main.o: main.c hello.h
 	gcc -o main.o -c main.c -W -Wall -ansi -pedantic
 	
+helloJenkins: 
+	gcc -o hello -Wall %WORKSPACE%\hello.h %WORKSPACE%\hello.c %WORKSPACE%\main.c
+	
+	
 help:
 	echo "try -clean option to delete all the saving files "
 	echo "try -hello option to compile and build the hello executable file"
