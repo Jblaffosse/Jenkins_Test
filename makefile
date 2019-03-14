@@ -21,3 +21,4 @@ clean:
 
 mrproper: clean
 	rm -f hello
+	rm -d -f main.c hello.exe hello.h hello.c readme.md makefile
