@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+     
+<project name="nation" default="full-suite" basedir=".">
+     
+    <!-- GLOBAL VARIABLES -->
+    <property name="source" value="." />
+    <!-- END -->
+     
+    <!-- AVAILABLE COMMANDS -->
+    <target name="full-suite" depends="date, build, list, execute, clean">
+      <echo message="Program done!"/>
+    </target>
+    <!-- END -->
+     
+    <!-- DATE -->
+    <target name="date">
+        <echo message="Printing system date ..."/>
+        <exec executable="date" />
+    </target>
+    <!-- END -->
+
+    <!-- LIST -->
+    <target name="list">
+      <echo message="Listing source folder ..."/>
+      <exec executable="ls">
+	<arg line="-l" />
+      </exec>
+    </target>
+    <!-- END -->
+
+    <!-- BUILD -->
+    <target name="build">
+      <echo message="Compile all the files in the workspace ..."/>
+      <exec executable="gcc">
+	<arg line="-o hello hello.h hello.c main.c" />
+      </exec>
+      <exec executable="chmod">
+	<arg line="a+rwx hello.exe" />
+      </exec>
+    </target>
+    <!-- END -->
+
+    <!-- EXECUTE -->
+    <target name="execute">
+      <echo message="Execute the program ..."/>
+      <exec executable="./hello"/>
+    </target>
+    <!-- END -->
+
+    <!-- CLEAN -->
+    <target name="clean">
+      <echo message="Clean all the workspace ..."/>
+      <exec executable="cp">
+	<arg line="build.xml /tmp/" />
+      </exec>
+      <exec executable="rm">
+	<arg line="-d hello hello.exe hello.h hello.c readme.md main.c makefile" />
+      </exec>
+      <exec executable="cp">
+	<arg line="/tmp/build.xml ." />
+      </exec>
+    </target> 
+    <!-- END -->
+
+
+</project>
