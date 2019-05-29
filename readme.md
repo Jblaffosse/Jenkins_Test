@@ -1,3 +1,5 @@
-This project aims to configure the jenkins project.
+This project aims to see how to retrieve all the source codes from a jenkins project.
 
-[![Build Status](http://your.reverse.proxy:8080/job/Freestyle_Test/badge/icon)](http://your.reverse.proxy:8080/job/Freestyle_Test/)
+You can compile the program thanks to the command *make* and then execute the program with *hello.exe*.
+
+Please see the user manual for more information.
